@@ -5,7 +5,7 @@ install-name:    '/System/Library/Frameworks/WatchKit.framework/WatchKit'
 swift-abi-version: 7
 exports:
   - targets:         [ armv7k-watchos, arm64-watchos, arm64e-watchos, arm64_32-watchos ]
-    symbols:              [  ]
+    symbols:              [ _spUtils_setRunningExtensionlessWKApp ]
     objc-classes:         [  ]
     objc-ivars:           [  ]
 ...

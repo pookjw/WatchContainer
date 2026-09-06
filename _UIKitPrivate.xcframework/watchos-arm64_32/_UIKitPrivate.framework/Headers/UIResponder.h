@@ -1,8 +1,9 @@
-#import <_WatchKitPrivate/WKDefines.h>
 #import <Foundation/Foundation.h>
+#import <_UIKitPrivate/UIDefines.h>
 
 NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 
-WKI_EXTERN void spUtils_setRunningExtensionlessWKApp(BOOL);
+@interface UIResponder : NSObject
+@end
 
 NS_HEADER_AUDIT_END(nullability, sendability)

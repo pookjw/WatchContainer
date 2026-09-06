@@ -3,9 +3,9 @@
 
 NS_HEADER_AUDIT_BEGIN(nullability, sendability)
 
-UIKIT_EXTERN NS_SWIFT_UI_ACTOR
-@interface UISceneConfiguration : NSObject <NSCopying, NSSecureCoding>
-@property (nonatomic, nullable) Class delegateClass;
+UIKIT_EXTERN
+@interface UIColor : NSObject <NSSecureCoding, NSCopying>
+@property (class, nonatomic, readonly) UIColor *systemOrangeColor;
 @end
 
 NS_HEADER_AUDIT_END(nullability, sendability)

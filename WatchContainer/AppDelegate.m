@@ -1,11 +1,12 @@
 //
-//  AppDelegate.mm
+//  AppDelegate.m
 //  WatchContainer
 //
 //  Created by Jinwoo Kim on 9/7/26.
 //
 
 #import "AppDelegate.h"
+#import "SceneDelegate.h"
 
 @interface AppDelegate ()
 @property (nonatomic) BOOL hasReceivedNonClockKitEvent;
@@ -17,28 +18,28 @@
     NSURL *scCacheURL = [[NSFileManager.defaultManager URLsForDirectory:NSLibraryDirectory inDomains:NSUserDomainMask].firstObject URLByAppendingPathComponent:@"Saved Application State" isDirectory:YES];
     [NSFileManager.defaultManager removeItemAtURL:scCacheURL error:NULL];
     
-    // TODO
     return YES;
 }
 
 - (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    abort();
+    UISceneConfiguration *configuration = [connectingSceneSession.configuration copy];
+    configuration.delegateClass = [SceneDelegate class];
+    return [configuration autorelease];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    // TODO
+    // noop
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
-    // TODO
+    // noop
 }
 
 - (void)didReceiveNonClockKitEvent {
-    // TODO
+    // noop
 }
 
 - (id _Nullable)extendLaunchTest {
-    // TODO
     return nil;
 }
 
