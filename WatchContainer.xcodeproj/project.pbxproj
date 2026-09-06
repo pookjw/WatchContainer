@@ -10,7 +10,18 @@
 		4F7E40FC304DEC44003CC757 /* _UIKitPrivate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7E40FB304DEC44003CC757 /* _UIKitPrivate.xcframework */; };
 		4F7E41E3304DF445003CC757 /* _WatchKitPrivate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7E41E1304DF445003CC757 /* _WatchKitPrivate.xcframework */; };
 		4F7E41E5304DF445003CC757 /* PepperUICore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7E41E2304DF445003CC757 /* PepperUICore.xcframework */; };
+		4F7E4233304E03E9003CC757 /* ChildDemo.app in Resources */ = {isa = PBXBuildFile; fileRef = 4F7E421F304E036C003CC757 /* ChildDemo.app */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F7E4231304E03DC003CC757 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F78B914304DE3680071F484 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F7E421E304E036C003CC757;
+			remoteInfo = ChildDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		4F7E4101304DECB3003CC757 /* CopyFiles */ = {
@@ -29,6 +40,7 @@
 		4F7E4103304DECB3003CC757 /* InterfaceGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InterfaceGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7E41E1304DF445003CC757 /* _WatchKitPrivate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = _WatchKitPrivate.xcframework; sourceTree = "<group>"; };
 		4F7E41E2304DF445003CC757 /* PepperUICore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PepperUICore.xcframework; sourceTree = "<group>"; };
+		4F7E421F304E036C003CC757 /* ChildDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChildDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -55,6 +67,11 @@
 			path = InterfaceGenerator;
 			sourceTree = "<group>";
 		};
+		4F7E4223304E036C003CC757 /* ChildDemo */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ChildDemo;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +88,11 @@
 			files = (
 			);
 		};
+		4F7E421C304E036C003CC757 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -79,6 +101,7 @@
 			children = (
 				4F78B91E304DE3690071F484 /* WatchContainer */,
 				4F7E4104304DECB3003CC757 /* InterfaceGenerator */,
+				4F7E4223304E036C003CC757 /* ChildDemo */,
 				4F7E40FA304DEC44003CC757 /* Frameworks */,
 				4F78B91D304DE3690071F484 /* Products */,
 			);
@@ -89,6 +112,7 @@
 			children = (
 				4F78B91C304DE3690071F484 /* WatchContainer.app */,
 				4F7E4103304DECB3003CC757 /* InterfaceGenerator */,
+				4F7E421F304E036C003CC757 /* ChildDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +140,9 @@
 			);
 			buildRules = (
 			);
+			dependencies = (
+				4F7E4232304E03DC003CC757 /* PBXTargetDependency */,
+			);
 			fileSystemSynchronizedGroups = (
 				4F78B91E304DE3690071F484 /* WatchContainer */,
 			);
@@ -142,6 +169,24 @@
 			productReference = 4F7E4103304DECB3003CC757 /* InterfaceGenerator */;
 			productType = "com.apple.product-type.tool";
 		};
+		4F7E421E304E036C003CC757 /* ChildDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F7E422A304E036C003CC757 /* Build configuration list for PBXNativeTarget "ChildDemo" */;
+			buildPhases = (
+				4F7E421B304E036C003CC757 /* Sources */,
+				4F7E421C304E036C003CC757 /* Frameworks */,
+				4F7E421D304E036C003CC757 /* Resources */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				4F7E4223304E036C003CC757 /* ChildDemo */,
+			);
+			name = ChildDemo;
+			productName = "ChildDemo Watch App";
+			productReference = 4F7E421F304E036C003CC757 /* ChildDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -156,6 +201,9 @@
 						CreatedOnToolsVersion = 27.0;
 					};
 					4F7E4102304DECB3003CC757 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					4F7E421E304E036C003CC757 = {
 						CreatedOnToolsVersion = 27.0;
 					};
 				};
@@ -175,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				4F78B91B304DE3690071F484 /* WatchContainer */,
+				4F7E421E304E036C003CC757 /* ChildDemo */,
 				4F7E4102304DECB3003CC757 /* InterfaceGenerator */,
 			);
 		};
@@ -182,6 +231,12 @@
 
 /* Begin PBXResourcesBuildPhase section */
 		4F78B91A304DE3690071F484 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				4F7E4233304E03E9003CC757 /* ChildDemo.app in Resources */,
+			);
+		};
+		4F7E421D304E036C003CC757 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
 			);
@@ -199,7 +254,20 @@
 			files = (
 			);
 		};
+		4F7E421B304E036C003CC757 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F7E4232304E03DC003CC757 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F7E421E304E036C003CC757 /* ChildDemo */;
+			targetProxy = 4F7E4231304E03DC003CC757 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4F78B925304DE3690071F484 /* Debug configuration for PBXProject "WatchContainer" */ = {
@@ -409,6 +477,81 @@
 			};
 			name = Release;
 		};
+		4F7E422B304E036C003CC757 /* Debug configuration for PBXNativeTarget "ChildDemo" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P53D29U9LJ;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ChildDemo;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pookjw.ChildDemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Debug;
+		};
+		4F7E422C304E036C003CC757 /* Release configuration for PBXNativeTarget "ChildDemo" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P53D29U9LJ;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = ChildDemo;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pookjw.ChildDemo.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 27.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -433,6 +576,14 @@
 			buildConfigurations = (
 				4F7E4108304DECB3003CC757 /* Debug configuration for PBXNativeTarget "InterfaceGenerator" */,
 				4F7E4109304DECB3003CC757 /* Release configuration for PBXNativeTarget "InterfaceGenerator" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		4F7E422A304E036C003CC757 /* Build configuration list for PBXNativeTarget "ChildDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F7E422B304E036C003CC757 /* Debug configuration for PBXNativeTarget "ChildDemo" */,
+				4F7E422C304E036C003CC757 /* Release configuration for PBXNativeTarget "ChildDemo" */,
 			);
 			defaultConfigurationName = Release;
 		};
