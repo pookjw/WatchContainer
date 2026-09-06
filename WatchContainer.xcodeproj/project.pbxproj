@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4F7E40FC304DEC44003CC757 /* _UIKitPrivate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7E40FB304DEC44003CC757 /* _UIKitPrivate.xcframework */; };
+		4F7E41E3304DF445003CC757 /* _WatchKitPrivate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7E41E1304DF445003CC757 /* _WatchKitPrivate.xcframework */; };
+		4F7E41E5304DF445003CC757 /* PepperUICore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7E41E2304DF445003CC757 /* PepperUICore.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,11 +27,26 @@
 		4F78B91C304DE3690071F484 /* WatchContainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchContainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7E40FB304DEC44003CC757 /* _UIKitPrivate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = _UIKitPrivate.xcframework; sourceTree = "<group>"; };
 		4F7E4103304DECB3003CC757 /* InterfaceGenerator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InterfaceGenerator; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F7E41E1304DF445003CC757 /* _WatchKitPrivate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = _WatchKitPrivate.xcframework; sourceTree = "<group>"; };
+		4F7E41E2304DF445003CC757 /* PepperUICore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PepperUICore.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4F7E41EF304DFA47003CC757 /* Exceptions for "WatchContainer" folder in "WatchContainer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4F78B91B304DE3690071F484 /* WatchContainer */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4F78B91E304DE3690071F484 /* WatchContainer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4F7E41EF304DFA47003CC757 /* Exceptions for "WatchContainer" folder in "WatchContainer" target */,
+			);
 			path = WatchContainer;
 			sourceTree = "<group>";
 		};
@@ -44,6 +61,8 @@
 		4F78B919304DE3690071F484 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				4F7E41E5304DF445003CC757 /* PepperUICore.xcframework in Frameworks */,
+				4F7E41E3304DF445003CC757 /* _WatchKitPrivate.xcframework in Frameworks */,
 				4F7E40FC304DEC44003CC757 /* _UIKitPrivate.xcframework in Frameworks */,
 			);
 		};
@@ -77,6 +96,8 @@
 		4F7E40FA304DEC44003CC757 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F7E41E1304DF445003CC757 /* _WatchKitPrivate.xcframework */,
+				4F7E41E2304DF445003CC757 /* PepperUICore.xcframework */,
 				4F7E40FB304DEC44003CC757 /* _UIKitPrivate.xcframework */,
 			);
 			name = Frameworks;
@@ -305,6 +326,7 @@
 				DEVELOPMENT_TEAM = P53D29U9LJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WatchContainer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchContainer;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -338,6 +360,7 @@
 				DEVELOPMENT_TEAM = P53D29U9LJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WatchContainer/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = WatchContainer;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;

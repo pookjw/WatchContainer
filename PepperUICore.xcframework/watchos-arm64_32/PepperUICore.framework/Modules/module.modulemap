@@ -1,0 +1,5 @@
+framework module PepperUICore [extern_c] {
+    umbrella header "PepperUICore.h"
+    export *
+    module * { export * }
+}
