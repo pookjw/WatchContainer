@@ -17,9 +17,11 @@
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     UIWindow *window = [[UIWindow alloc] initWithWindowScene:(UIWindowScene *)scene];
+    
     TestViewController *rootViewController = [[TestViewController alloc] init];
     window.rootViewController = rootViewController;
     [rootViewController release];
+    
     self.window = window;
     [window makeKeyAndVisible];
     [window release];
