@@ -11,7 +11,7 @@
 #import <FrontBoardServices/FrontBoardServices.h>
 #import <PepperUICore/PepperUICore.h>
 
-std::optional<std::shared_ptr<WCC::ApplicationHandle>> WCC::ApplicationHandle::createHandle(NSBundle *applicationBundle, NSError * __autoreleasing _Nullable * _Nullable error) {
+std::optional<WCC::ApplicationHandle> WCC::ApplicationHandle::createHandle(NSBundle *applicationBundle, NSError * __autoreleasing _Nullable * _Nullable error) {
     NSURL *executableURL = applicationBundle.executableURL;
     if (executableURL == nil) {
         if (error != NULL) {
@@ -39,13 +39,22 @@ std::optional<std::shared_ptr<WCC::ApplicationHandle>> WCC::ApplicationHandle::c
         return {};
     }
     
-    std::shared_ptr<WCC::ApplicationHandle> result = std::make_shared<WCC::ApplicationHandle>(WCC::ApplicationHandle(applicationBundle));
-    return result;
+    return WCC::ApplicationHandle(applicationBundle);
 }
 
 WCC::ApplicationHandle::ApplicationHandle(NSBundle *applicationBundle)
 : _applicationBundle([applicationBundle retain]) {
     // noop
+}
+
+WCC::ApplicationHandle::ApplicationHandle(const WCC::ApplicationHandle &handle) {
+    this->_applicationBundle = [handle._applicationBundle retain];
+}
+
+WCC::ApplicationHandle & WCC::ApplicationHandle::operator=(const WCC::ApplicationHandle &handle) {
+    [this->_applicationBundle release];
+    this->_applicationBundle = [handle._applicationBundle retain];
+    return *this;
 }
 
 WCC::ApplicationHandle::~ApplicationHandle() {

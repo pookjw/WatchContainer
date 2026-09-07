@@ -11,7 +11,6 @@
 
 #import <Foundation/Foundation.h>
 #import <WatchContainerCore/WCCDefines.h>
-#include <memory>
 #include <optional>
 #include <functional>
 
@@ -19,10 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 namespace WCC {
 
-class ApplicationHandle {
+struct ApplicationHandle {
 public:
-    static std::optional<std::shared_ptr<WCC::ApplicationHandle>> createHandle(NSBundle *applicationBundle, NSError * __autoreleasing _Nullable * _Nullable error);
+    static std::optional<WCC::ApplicationHandle> createHandle(NSBundle *applicationBundle, NSError * __autoreleasing _Nullable * _Nullable error);
     ~ApplicationHandle();
+    ApplicationHandle(const WCC::ApplicationHandle &handle);
+    ApplicationHandle& operator=(const WCC::ApplicationHandle &handle);
     
     void execute(std::function<void (NSError * _Nullable)> completion);
 private:

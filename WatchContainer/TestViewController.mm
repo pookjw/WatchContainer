@@ -7,6 +7,7 @@
 
 #import "TestViewController.h"
 #import <WatchContainerCore/WatchContainerCore.h>
+#include <memory>
 
 @interface TestViewController ()
 @property (assign, nonatomic) std::shared_ptr<WCC::ApplicationHandle> handle;
@@ -31,11 +32,11 @@
     assert(childDemoURL != nil);
     
     NSError * _Nullable error = nil;
-    std::optional<std::shared_ptr<WCC::ApplicationHandle>> handle = WCC::ApplicationHandle::createHandle(bundle, &error);
+    std::optional<WCC::ApplicationHandle> handle = WCC::ApplicationHandle::createHandle(bundle, &error);
     assert(error == nil);
     [bundle release];
     
-    self.handle = handle.value();
+    self.handle = std::make_shared<WCC::ApplicationHandle>(handle.value());
     
     self.handle->execute(^(NSError * _Nullable error) {
         abort();
