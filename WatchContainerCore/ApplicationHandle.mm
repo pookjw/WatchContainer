@@ -52,8 +52,9 @@ WCC::ApplicationHandle::ApplicationHandle(const WCC::ApplicationHandle &handle) 
 }
 
 WCC::ApplicationHandle & WCC::ApplicationHandle::operator=(const WCC::ApplicationHandle &handle) {
+    NSBundle *applicationBundle = [handle._applicationBundle retain];
     [this->_applicationBundle release];
-    this->_applicationBundle = [handle._applicationBundle retain];
+    this->_applicationBundle = applicationBundle;
     return *this;
 }
 
