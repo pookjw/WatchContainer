@@ -1,0 +1,5 @@
+framework module FrontBoard [extern_c] {
+    umbrella header "FrontBoard.h"
+    export *
+    module * { export * }
+}
