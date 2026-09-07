@@ -17,6 +17,7 @@
 		4FFC3869304EB9C700F12B8C /* RunningBoardServices.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFC3849304EB6A700F12B8C /* RunningBoardServices.xcframework */; };
 		4FFC386D304EB9CE00F12B8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFC386C304EB9CE00F12B8C /* Foundation.framework */; };
 		4FFC3879304ECF0B00F12B8C /* FrontBoardServices.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FFC3878304ECF0B00F12B8C /* FrontBoardServices.xcframework */; };
+		4FFC3914304F099700F12B8C /* PepperUICore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F7E41E2304DF445003CC757 /* PepperUICore.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +146,7 @@
 				4FFC3869304EB9C700F12B8C /* RunningBoardServices.xcframework in Frameworks */,
 				4FFC386D304EB9CE00F12B8C /* Foundation.framework in Frameworks */,
 				4FFC3879304ECF0B00F12B8C /* FrontBoardServices.xcframework in Frameworks */,
+				4FFC3914304F099700F12B8C /* PepperUICore.xcframework in Frameworks */,
 				4FFC3867304EB9C700F12B8C /* FrontBoard.xcframework in Frameworks */,
 			);
 		};
