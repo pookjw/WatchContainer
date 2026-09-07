@@ -13,6 +13,8 @@ exports:
     FBSSceneSettings,
     FBSMutableSceneSettings,
     FBSSettings,
-    FBSSceneTransitionContext ]
+    FBSSceneTransitionContext,
+    FBSSceneSpecification,
+    FBSSceneParameters ]
     objc-ivars:           [  ]
 ...
