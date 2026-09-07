@@ -16,6 +16,9 @@ import SwiftUI
 
 @main
 struct Playground_Watch_AppApp: App {
+    init() {
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
