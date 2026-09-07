@@ -6,4 +6,6 @@
 #import <FrontBoardServices/FBSSceneSettings.h>
 #import <FrontBoardServices/FBSMutableSceneSettings.h>
 #import <FrontBoardServices/FBSSceneTransitionContext.h>
-
+#import <FrontBoardServices/FBSSceneSpecification.h>
+#import <FrontBoardServices/FBSSceneParameters.h>
+#import <FrontBoardServices/FBSMutableSceneParameters.h>

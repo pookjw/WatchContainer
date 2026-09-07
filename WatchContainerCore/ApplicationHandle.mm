@@ -9,6 +9,7 @@
 #import <WatchContainerCore/WCCError.h>
 #import <FrontBoard/FrontBoard.h>
 #import <FrontBoardServices/FrontBoardServices.h>
+#import <PepperUICore/PepperUICore.h>
 
 std::optional<std::shared_ptr<WCC::ApplicationHandle>> WCC::ApplicationHandle::createHandle(NSBundle *applicationBundle, NSError * __autoreleasing _Nullable * _Nullable error) {
     NSURL *executableURL = applicationBundle.executableURL;
@@ -117,12 +118,15 @@ void WCC::ApplicationHandle::execute(std::function<void (NSError * _Nullable)> c
          };
      }
      */
-//    definition.specification = nil;
+    definition.specification = [PUICApplicationSceneSpecification specification];
     
     FBScene *fbScene = [[FBSceneManager sharedInstance] createSceneWithDefinition:definition];
 //    [fbScene addExtension:[CSLApplicationLifecycleSceneExtension class]];
+    
     // __63-[CSLActivateApplicationTask _executeAllowingRetry:completion:]_block_invoke.64
-//    [fbScene configureParameters:nil]
+    [fbScene configureParameters:^(FBSMutableSceneParameters *parameters) {
+        abort();
+    }];
     
     [fbScene performUpdate:^(FBSMutableSceneSettings * _Nonnull settings, FBSSceneTransitionContext * _Nonnull transitionContext) {
         abort();

@@ -12,3 +12,4 @@
 #import <_UIKitPrivate/UIInterface.h>
 #import <_UIKitPrivate/UIViewController.h>
 #import <_UIKitPrivate/UIWindow.h>
+#import <_UIKitPrivate/UIApplicationSceneSpecification.h>
