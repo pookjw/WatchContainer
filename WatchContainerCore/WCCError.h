@@ -19,7 +19,8 @@ WCC_EXTERN NSErrorDomain const WatchContainerErrorDomain;
 typedef NS_ENUM(NSInteger, WatchContainerErrorCode) {
     WatchContainerErrorCodeUnknown = -1,
     WatchContainerErrorCodeNoExecutableURL = 1,
-    WatchContainerErrorCodeExecutableNotFound = 2
+    WatchContainerErrorCodeExecutableNotFound = 2,
+    WatchContainerErrorCodeNoBundleIdentifier = 3
 };
 
 NS_HEADER_AUDIT_END(nullability, sendability)

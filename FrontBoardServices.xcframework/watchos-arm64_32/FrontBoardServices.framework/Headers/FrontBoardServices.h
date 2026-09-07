@@ -1,0 +1,9 @@
+#import <FrontBoardServices/FBSSceneDefinition.h>
+#import <FrontBoardServices/FBSMutableSceneDefinition.h>
+#import <FrontBoardServices/FBSSceneIdentity.h>
+#import <FrontBoardServices/FBSSceneClientIdentity.h>
+#import <FrontBoardServices/FBSSettings.h>
+#import <FrontBoardServices/FBSSceneSettings.h>
+#import <FrontBoardServices/FBSMutableSceneSettings.h>
+#import <FrontBoardServices/FBSSceneTransitionContext.h>
+

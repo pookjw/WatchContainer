@@ -1,3 +1,6 @@
+#ifndef WCCDefines_hpp
+#define WCCDefines_hpp
+
 #ifdef __cplusplus
 #define WCC_EXTERN  extern "C" __attribute__((visibility ("default")))
 #else
@@ -6,4 +9,6 @@
 
 #ifdef __cplusplus
 namespace WCC {};
+#endif
+
 #endif

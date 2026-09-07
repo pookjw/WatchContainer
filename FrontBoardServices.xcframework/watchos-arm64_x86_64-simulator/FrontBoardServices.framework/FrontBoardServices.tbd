@@ -1,16 +1,18 @@
 --- !tapi-tbd
 tbd-version:     4
 targets:         [ i386-watchos-simulator, x86_64-watchos-simulator, arm64-watchos-simulator ]
-install-name:    '/System/Library/PrivateFrameworks/FrontBoard.framework/FrontBoard'
+install-name:    '/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices'
 swift-abi-version: 7
 exports:
   - targets:         [ i386-watchos-simulator, x86_64-watchos-simulator, arm64-watchos-simulator ]
     symbols:              [  ]
-    objc-classes:         [ FBProcessExecutionContext,
-    FBMutableProcessExecutionContext,
-    FBProcess,
-    FBSceneManager,
+    objc-classes:         [ FBSSceneDefinition,
+    FBSMutableSceneDefinition,
     FBSSceneIdentity,
-    FBScene ]
+    FBSSceneClientIdentity,
+    FBSSceneSettings,
+    FBSMutableSceneSettings,
+    FBSSettings,
+    FBSSceneTransitionContext ]
     objc-ivars:           [  ]
 ...

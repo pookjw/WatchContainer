@@ -8,6 +8,10 @@
 #import "TestViewController.h"
 #import <WatchContainerCore/WatchContainerCore.h>
 
+@interface TestViewController ()
+@property (assign, nonatomic) std::shared_ptr<WCC::ApplicationHandle> handle;
+@end
+
 @implementation TestViewController
 
 - (void)viewDidLoad {
@@ -31,7 +35,11 @@
     assert(error == nil);
     [bundle release];
     
-    abort();
+    self.handle = handle.value();
+    
+    self.handle->execute(^(NSError * _Nullable error) {
+        abort();
+    });
 }
 
 @end
