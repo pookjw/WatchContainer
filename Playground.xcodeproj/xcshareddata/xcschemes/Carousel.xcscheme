@@ -6,6 +6,21 @@
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES"
       buildArchitectures = "Automatic">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4F7E4240304E0560003CC757"
+               BuildableName = "Playground.app"
+               ReferencedContainer = "container:Playground.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -25,10 +40,27 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       queueDebuggingEnabled = "No">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "#!/bin/sh&#10;# DYLD_INSERT_LIBRARIES=$(cat /Users/pookjw/Desktop/path):/Users/pookjw/Desktop/RevealServer/RevealServer.xcframework/ios-arm64_x86_64-simulator/RevealServer.framework/RevealServer&#10;&#10;xcrun simctl list devices booted -j |&#10;jq -r &apos;&#10;  .devices&#10;  | to_entries[]&#10;  | select(.key | contains(&quot;watchOS&quot;))&#10;  | .value[]&#10;  | select(.state == &quot;Booted&quot;)&#10;  | .udid&#10;&apos; |&#10;while read -r UDID; do&#10;    xcrun simctl spawn &quot;$UDID&quot; \&#10;        launchctl debug system/com.apple.Carousel \&#10;        --environment MallocStackLogging=1&#10;    xcrun simctl spawn &quot;$UDID&quot; \&#10;        launchctl stop com.apple.Carousel&#10;done&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <PathRunnable
          runnableDebuggingMode = "0"
          FilePath = "/Library/Developer/CoreSimulator/Volumes/watchOS_24R5355a/Library/Developer/CoreSimulator/Profiles/Runtimes/watchOS 27.0.simruntime/Contents/Resources/RuntimeRoot/System/Library/CoreServices/Carousel.app/Carousel">
       </PathRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4F7E4240304E0560003CC757"
+            BuildableName = "Playground.app"
+            ReferencedContainer = "container:Playground.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -36,6 +68,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "4F7E4240304E0560003CC757"
+            BuildableName = "Playground.app"
+            ReferencedContainer = "container:Playground.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
