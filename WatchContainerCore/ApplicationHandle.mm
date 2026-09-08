@@ -133,14 +133,20 @@ void WCC::ApplicationHandle::execute(std::function<void (NSError * _Nullable)> c
     FBScene *fbScene = [[FBSceneManager sharedInstance] createSceneWithDefinition:definition];
 //    [fbScene addExtension:[CSLApplicationLifecycleSceneExtension class]];
     
-    // __63-[CSLActivateApplicationTask _executeAllowingRetry:completion:]_block_invoke.64
     [fbScene configureParameters:^(FBSMutableSceneParameters *parameters) {
+        // __63-[CSLActivateApplicationTask _executeAllowingRetry:completion:]_block_invoke.64
+        // -[CSLActivateApplicationTask configureInitialSceneParameters:forApplication:]
+        [parameters updateClientSettingsWithBlock:^(FBSMutableSceneClientSettings *settings) {
+            // __77-[CSLActivateApplicationTask configureInitialSceneParameters:forApplication:]_block_invoke
+            abort();
+        }];
+        
         abort();
     }];
     
-    [fbScene performUpdate:^(FBSMutableSceneSettings * _Nonnull settings, FBSSceneTransitionContext * _Nonnull transitionContext) {
+    [fbScene performUpdate:^(FBSMutableSceneSettings *settings, FBSSceneTransitionContext *transitionContext) {
         abort();
-    } withCompletion:^(bool success, NSError * _Nonnull error) {
+    } withCompletion:^(BOOL success, NSError * _Nullable error) {
         abort();
     }];
     

@@ -9,3 +9,5 @@
 #import <FrontBoardServices/FBSSceneSpecification.h>
 #import <FrontBoardServices/FBSSceneParameters.h>
 #import <FrontBoardServices/FBSMutableSceneParameters.h>
+#import <FrontBoardServices/FBSSceneClientSettings.h>
+#import <FrontBoardServices/FBSMutableSceneClientSettings.h>
